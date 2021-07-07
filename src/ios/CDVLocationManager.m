@@ -31,6 +31,8 @@
     [self initEventQueue];
     [self pauseEventPropagationToDom]; // Before the DOM is loaded we'll just keep collecting the events and fire them later.
 
+    [self initLocationManager];
+    [self initPeripheralManager];
     
     self.debugLogEnabled = true;
     self.debugNotificationsEnabled = false;
@@ -287,10 +289,6 @@
 }
 
 - (void)startMonitoringForRegion:(CDVInvokedUrlCommand*)command {
-
-    [self initLocationManager];
-    [self initPeripheralManager];
-
     [self _handleCallSafely:^CDVPluginResult *(CDVInvokedUrlCommand *command) {
         
         NSError* error;

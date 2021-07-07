@@ -38,12 +38,7 @@ var BeaconRegion = require('com.aryxe.cordova.beacon.BeaconRegion');
  * @constructor {LocationManager}
  */
 
- function LocationManager (){
-	this.delegate = new Delegate();
-	this._registerDelegateCallbackId();
-
-	this.bindMethodContexts();
-	
+ function LocationManager (){	
  }
  
 /**

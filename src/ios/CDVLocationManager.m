@@ -289,6 +289,9 @@
 }
 
 - (void)startMonitoringForRegion:(CDVInvokedUrlCommand*)command {
+
+	
+
     [self _handleCallSafely:^CDVPluginResult *(CDVInvokedUrlCommand *command) {
         
         NSError* error;
